@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://ca7p2sgd3k2yg"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_i388k"]
+[ext_resource type="Texture2D" uid="uid://rdkxfu0a6ihk" path="res://images/weapons/Zweihander_Gold_resized.png" id="2_3qkcp"]
+
+[resource]
+script = ExtResource("1_i388k")
+name = "GoldenSword"
+texture = ExtResource("2_3qkcp")

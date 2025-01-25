@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://c3ogkpddnivo1"]
+
+[ext_resource type="Script" path="res://scripts/tree.gd" id="1_6guw4"]
+[ext_resource type="Texture2D" uid="uid://dnv37n7hgemeu" path="res://images/map/tree.png" id="2_l2i5y"]
+[ext_resource type="Resource" uid="uid://nxt7fy7wkqna" path="res://inventory/items/wood.tres" id="2_n271r"]
+[ext_resource type="Texture2D" uid="uid://b3l5yv817c0be" path="res://images/map/tree_empty.png" id="3_aokpg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnx6f"]
+atlas = ExtResource("2_l2i5y")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eaq6n"]
+atlas = ExtResource("3_aokpg")
+region = Rect2(0, 1, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2crf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnx6f")
+}],
+"loop": true,
+"name": &"tree",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eaq6n")
+}],
+"loop": true,
+"name": &"tree_stem",
+"speed": 0.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ck8c"]
+radius = 28.0179
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8yi1"]
+size = Vector2(11.25, 11.875)
+
+[node name="Tree" type="Node2D"]
+scale = Vector2(1.6, 1.6)
+script = ExtResource("1_6guw4")
+item = ExtResource("2_n271r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i2crf")
+animation = &"tree"
+
+[node name="looting_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="looting_area"]
+shape = SubResource("CircleShape2D_1ck8c")
+
+[node name="wood_timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.42109e-14, 9.6875)
+shape = SubResource("RectangleShape2D_g8yi1")
+
+[connection signal="body_entered" from="looting_area" to="." method="_on_looting_area_body_entered"]
+[connection signal="body_exited" from="looting_area" to="." method="_on_looting_area_body_exited"]
+[connection signal="timeout" from="wood_timer" to="." method="_on_wood_timer_timeout"]

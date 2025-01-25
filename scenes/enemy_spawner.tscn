@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://clt8e3odqq8tj"]
+
+[ext_resource type="Texture2D" uid="uid://bdqwi4avmvp4f" path="res://images/enemy/spawner.png" id="1_1qckt"]
+
+[node name="Enemy_Spawner_Cave" type="StaticBody2D"]
+scale = Vector2(0.42, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1qckt")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df6u8lsf5vj4b"
+path="res://.godot/imported/Cold Wind Sound Effect.mp3-62c93f95b4fe6681f558c86fb3abdf68.mp3str"
+
+[deps]
+
+source_file="res://sounds/Cold Wind Sound Effect.mp3"
+dest_files=["res://.godot/imported/Cold Wind Sound Effect.mp3-62c93f95b4fe6681f558c86fb3abdf68.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

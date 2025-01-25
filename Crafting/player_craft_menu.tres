@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CraftMenu" load_steps=7 format=3 uid="uid://babpx2xth37to"]
+
+[ext_resource type="Script" path="res://Crafting/craft.gd" id="1_j71of"]
+[ext_resource type="Script" path="res://Crafting/Craft_Menu.gd" id="3_5ogxl"]
+[ext_resource type="Resource" uid="uid://dus8fx0c4skaa" path="res://Crafting/crafts/arrow_craft.tres" id="4_iialn"]
+[ext_resource type="Resource" uid="uid://4364a4b8fptf" path="res://Crafting/crafts/bow_craft.tres" id="4_iql0g"]
+[ext_resource type="Resource" uid="uid://cub048dvwi4fe" path="res://Crafting/crafts/sword_craft.tres" id="5_82ibv"]
+[ext_resource type="Resource" uid="uid://dypt4vx6wffje" path="res://Crafting/crafts/GSword_Craft.tres" id="5_hugnu"]
+
+[resource]
+script = ExtResource("3_5ogxl")
+items = Array[ExtResource("1_j71of")]([ExtResource("5_82ibv"), ExtResource("4_iql0g"), ExtResource("4_iialn"), ExtResource("5_hugnu")])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://byapm6xfwhghn"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_vtvpt"]
+[ext_resource type="Texture2D" uid="uid://2tlmejdamg4v" path="res://images/enemy/ingot_iron_icon.png" id="2_di547"]
+
+[resource]
+script = ExtResource("1_vtvpt")
+name = "monsterDrop"
+texture = ExtResource("2_di547")

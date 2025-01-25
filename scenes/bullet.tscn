@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbjyk5wudpgan"]
+
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_oytbl"]
+[ext_resource type="Texture2D" uid="uid://xyiwxhdkkkfj" path="res://images/weapons/bullet.png" id="2_jvepd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hutpq"]
+radius = 4.0
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_oytbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(0.106061, 0.057377)
+texture = ExtResource("2_jvepd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hutpq")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-1.19209e-07, 0)
+scale = Vector2(0.3, 0.2)
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

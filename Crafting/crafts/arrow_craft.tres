@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Craft" load_steps=6 format=3 uid="uid://dus8fx0c4skaa"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_5q3dr"]
+[ext_resource type="Resource" uid="uid://nxt7fy7wkqna" path="res://inventory/items/wood.tres" id="2_8tg7w"]
+[ext_resource type="Resource" uid="uid://byapm6xfwhghn" path="res://inventory/items/iron_drop.tres" id="3_6ikuo"]
+[ext_resource type="Resource" path="res://inventory/items/arrow.tres" id="4_ca3u1"]
+[ext_resource type="Script" path="res://Crafting/craft.gd" id="5_e4p6r"]
+
+[resource]
+script = ExtResource("5_e4p6r")
+item = ExtResource("4_ca3u1")
+amount = 5
+cost_items = Array[ExtResource("1_5q3dr")]([ExtResource("2_8tg7w"), ExtResource("3_6ikuo")])
+cost_amounts = Array[int]([2, 1])

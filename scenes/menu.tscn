@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdqpp627t1ag1"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_h612j"]
+[ext_resource type="Texture2D" uid="uid://cpml0yshafsr6" path="res://images/Designer_4.jpeg" id="1_ligu8"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h612j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 107.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7, 1.7)
+alignment = 1
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+modulate = Color(0, 1, 1, 1)
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.98
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 66
+text = "START"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 66
+text = "EXIT"
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+show_behind_parent = true
+position = Vector2(-277.353, -130)
+scale = Vector2(0.696234, 0.682265)
+texture = ExtResource("1_ligu8")
+centered = false
+
+[node name="Instructions" type="Button" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_direction = 1
+layout_mode = 0
+offset_left = 839.0
+offset_top = 564.0
+offset_right = 1229.0
+offset_bottom = 663.0
+scale = Vector2(0.893929, 0.840528)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.98
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 66
+text = "Instructions"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Instructions" to="." method="_on_instructions_pressed"]

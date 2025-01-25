@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cn24lyiehx3cq"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_0rh1u"]
+[ext_resource type="Texture2D" uid="uid://cg2vh7fwsa2oc" path="res://images/weapons/Recurve_01_resized.png" id="2_h2sjr"]
+
+[resource]
+script = ExtResource("1_0rh1u")
+name = "Bow"
+texture = ExtResource("2_h2sjr")

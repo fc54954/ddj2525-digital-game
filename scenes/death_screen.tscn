@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://de6jxdilme3xa"]
+
+[ext_resource type="Script" path="res://scenes/death_screen.gd" id="1_vgm1f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5nspu"]
+font_size = 29
+font_color = Color(1, 0, 0, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Death Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vgm1f")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 21.0
+offset_right = 570.0
+offset_bottom = 61.0
+scale = Vector2(3, 3.056)
+text = "You Died"
+label_settings = SubResource("LabelSettings_5nspu")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Play" type="Button" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_direction = 1
+offset_left = 485.0
+offset_top = 280.0
+offset_right = 795.0
+offset_bottom = 379.0
+scale = Vector2(1, 1.001)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.98
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 66
+text = "Try Again"
+
+[node name="Menu" type="Button" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_direction = 1
+offset_left = 535.0
+offset_top = 423.0
+offset_right = 745.0
+offset_bottom = 522.0
+scale = Vector2(1, 0.995)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.98
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 66
+text = "Menu"
+
+[node name="Instructions" type="Button" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_direction = 1
+offset_left = 922.0
+offset_top = 523.0
+offset_right = 1312.0
+offset_bottom = 622.0
+scale = Vector2(0.535709, 0.544642)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.98
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 66
+text = "Instructions"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Instructions" to="." method="_on_instructions_pressed"]

@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1s266b71rr4l"]
+
+[ext_resource type="Texture2D" uid="uid://bobp4ic6083re" path="res://theENd.png" id="1_34fo3"]
+[ext_resource type="Script" path="res://scenes/end.gd" id="1_c71wg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_left = 0.205
+anchor_right = 0.217
+anchor_bottom = 1.0
+offset_left = -262.4
+offset_right = -277.76
+offset_bottom = -720.0
+grow_vertical = 2
+script = ExtResource("1_c71wg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_34fo3")
+expand_mode = 1
+
+[node name="Main_Menu" type="Button" parent="TextureRect"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -612.0
+offset_top = -180.0
+offset_right = -212.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.85, 0.85)
+theme_override_font_sizes/font_size = 66
+text = "MAIN MENU"
+
+[node name="Try_Again" type="Button" parent="TextureRect"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 272.0
+offset_top = -180.0
+offset_right = 672.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.85, 0.85)
+theme_override_font_sizes/font_size = 66
+text = "TRY AGAIN"
+
+[connection signal="pressed" from="TextureRect/Main_Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="TextureRect/Try_Again" to="." method="_on_try_again_pressed"]

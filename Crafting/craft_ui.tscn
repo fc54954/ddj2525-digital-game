@@ -1,0 +1,206 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwosuopt8suwj"]
+
+[ext_resource type="Texture2D" uid="uid://b5an24ah7y0xx" path="res://images/player/inventory_background.png" id="1_lmrnb"]
+[ext_resource type="Script" path="res://Crafting/craft_ui.gd" id="1_lu6pv"]
+[ext_resource type="PackedScene" uid="uid://3if0bygl6t34" path="res://Crafting/craft_slots.tscn" id="3_n1483"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xeyfl"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Craft_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(14.4077, 8.55476)
+script = ExtResource("1_lu6pv")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 446.0
+offset_bottom = 323.0
+scale = Vector2(0.0760322, 0.131139)
+texture = ExtResource("1_lmrnb")
+patch_margin_left = 1
+patch_margin_right = 2
+patch_margin_bottom = 1
+
+[node name="Items" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 12.4079
+offset_top = 17.8275
+offset_right = 183.408
+offset_bottom = 52.8275
+scale = Vector2(2.42571, 1.61638)
+columns = 5
+
+[node name="craft_slots" parent="NinePatchRect/Items" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/Items/craft_slots"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(3.88416, 3.67416)
+action_mode = 0
+flat = true
+
+[node name="craft_slots2" parent="NinePatchRect/Items" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/Items/craft_slots2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(3.88416, 3.67416)
+action_mode = 0
+flat = true
+
+[node name="craft_slots3" parent="NinePatchRect/Items" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/Items/craft_slots3"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(3.88416, 3.67416)
+action_mode = 0
+flat = true
+
+[node name="craft_slots4" parent="NinePatchRect/Items" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/Items/craft_slots4"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(3.88416, 3.67416)
+action_mode = 0
+flat = true
+
+[node name="craft_slots5" parent="NinePatchRect/Items" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/Items/craft_slots5"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(3.88416, 3.67416)
+action_mode = 0
+flat = true
+
+[node name="Crafts" type="Node2D" parent="NinePatchRect"]
+position = Vector2(-10, 0)
+scale = Vector2(0.901775, 0.950155)
+
+[node name="Resources" type="GridContainer" parent="NinePatchRect/Crafts"]
+offset_left = 38.0
+offset_top = 85.0
+offset_right = 69.0
+offset_bottom = 221.0
+scale = Vector2(2.04157, 1.39232)
+
+[node name="craft_slots" parent="NinePatchRect/Crafts/Resources" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots2" parent="NinePatchRect/Crafts/Resources" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots3" parent="NinePatchRect/Crafts/Resources" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots4" parent="NinePatchRect/Crafts/Resources" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Resources2" type="GridContainer" parent="NinePatchRect/Crafts"]
+offset_left = 132.0
+offset_top = 85.0
+offset_right = 163.0
+offset_bottom = 221.0
+scale = Vector2(2.04157, 1.39232)
+
+[node name="craft_slots" parent="NinePatchRect/Crafts/Resources2" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots2" parent="NinePatchRect/Crafts/Resources2" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots3" parent="NinePatchRect/Crafts/Resources2" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots4" parent="NinePatchRect/Crafts/Resources2" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Resources3" type="GridContainer" parent="NinePatchRect/Crafts"]
+offset_left = 225.0
+offset_top = 85.0
+offset_right = 256.0
+offset_bottom = 221.0
+scale = Vector2(2.04157, 1.39232)
+
+[node name="craft_slots" parent="NinePatchRect/Crafts/Resources3" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots2" parent="NinePatchRect/Crafts/Resources3" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots3" parent="NinePatchRect/Crafts/Resources3" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots4" parent="NinePatchRect/Crafts/Resources3" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Resources4" type="GridContainer" parent="NinePatchRect/Crafts"]
+offset_left = 318.0
+offset_top = 85.0
+offset_right = 349.0
+offset_bottom = 221.0
+scale = Vector2(2.04157, 1.39232)
+
+[node name="craft_slots" parent="NinePatchRect/Crafts/Resources4" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots2" parent="NinePatchRect/Crafts/Resources4" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots3" parent="NinePatchRect/Crafts/Resources4" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots4" parent="NinePatchRect/Crafts/Resources4" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Resources5" type="GridContainer" parent="NinePatchRect/Crafts"]
+offset_left = 411.0
+offset_top = 85.0
+offset_right = 442.0
+offset_bottom = 221.0
+scale = Vector2(2.04157, 1.39232)
+
+[node name="craft_slots" parent="NinePatchRect/Crafts/Resources5" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots2" parent="NinePatchRect/Crafts/Resources5" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots3" parent="NinePatchRect/Crafts/Resources5" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="craft_slots4" parent="NinePatchRect/Crafts/Resources5" instance=ExtResource("3_n1483")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.1591
+offset_top = 35.0682
+offset_right = 76.1591
+offset_bottom = 58.0682
+scale = Vector2(0.11636, 0.162484)
+text = "Crafting"
+label_settings = SubResource("LabelSettings_xeyfl")
+
+[connection signal="button_down" from="NinePatchRect/Items/craft_slots/Button" to="NinePatchRect/Items/craft_slots" method="_on_button_button_down"]
+[connection signal="button_down" from="NinePatchRect/Items/craft_slots2/Button" to="NinePatchRect/Items/craft_slots2" method="_on_button_button_down"]
+[connection signal="button_down" from="NinePatchRect/Items/craft_slots3/Button" to="NinePatchRect/Items/craft_slots3" method="_on_button_button_down"]
+[connection signal="button_down" from="NinePatchRect/Items/craft_slots4/Button" to="NinePatchRect/Items/craft_slots4" method="_on_button_button_down"]
+[connection signal="button_down" from="NinePatchRect/Items/craft_slots5/Button" to="NinePatchRect/Items/craft_slots5" method="_on_button_button_down"]
